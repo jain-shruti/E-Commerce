@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/solid.min.css" integrity="sha512-xIEmv/u9DeZZRfvRS06QVP2C97Hs5i0ePXDooLa5ZPla3jOgPT/w6CzoSMPuRiumP7A/xhnUBxRmgWWwU26ZeQ==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script>
+		
+		function Delete(e){
+			let cart = [];
+			JSON.parse(localStorage.getItem('cart')).map(data=>{
+				if(data.id != e.parentElement.parentElement.children[0].textContent){					
+					cart.push(data);
+				}
+			});
+			localStorage.setItem('cart',JSON.stringify(cart));
+			window.location.reload();
+		};
+		function purchase() {
+			alert("Thank you for your order.We truly value our loyal customers. Thanks for making who we are!");
+			window.location.reload();
+	}
+	</script>
+	<script type="text/javascript" src="action.js" async></script>
+	<nav class="navbar navbar-expand-md">
+		<a href="#" class="navbar-brand" style="font-size: 26px"> E-Commerce</a>
+		<ul class="navbar-nav">
+			<!-- Nav bar items -->
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about_us">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link act" href="products.html" >Products</a>
+			</li>
+		</ul>
+		<div class="cartIcon">
+			<a class="nav-link"  href="#">
+				<i class="fas fa-shopping-cart"></i>
+				<span class="cartQty">0</span>
+			</a>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+	    	<div class="col-sm">
+	    		<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/dellinspiron-14.jpeg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Inspiron 14 5402 Laptop</h5>
+					    <p class="card-text"> Dell<br>
+					    	&#8377;<span>59990.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-sm">
+	    		<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/dellinspiron-15.jpeg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Inspiron 15 7501 Laptop</h5>
+					    <p class="card-text"> Dell<br> 
+					    	&#8377;<span> 90989.97</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>	      
+	    	</div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/vostro-15.jpeg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Vostro 15 3501 Laptop</h5>
+					    <p class="card-text"> Dell<br> 
+					    	&#8377;<span> 39989.99</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>
+		    </div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/latitude.jpeg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Latitude 7310 Laptop</h5>
+					    <p class="card-text"> Dell<br> 
+					    	&#8377;<span> 98184.33</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>		      
+		    </div>		  		
+		</div>
+		<div class="row">
+	    	<div class="col-sm">
+	    		<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/macbookpro.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">MacBook Pro</h5>
+					    <p class="card-text"> Apple<br> 
+					    	&#8377;<span> 102990.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-sm">
+	    		<div class="card  " style="width: 18rem;">
+					<img class="card-img-top" src="images/macbookair.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">MacBook Air</h5>
+					    <p class="card-text"> Apple<br> <span style="color: red">Out of Stock!</span>  </p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>	      
+	    	</div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/macbookpro13.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">MacBook Pro 13 inch</h5>
+					    <p class="card-text "> Apple<br> 
+					    	&#8377;<span> 142900.00</span> </p>
+					    <button class="btn btn-primary disable">ADD TO CART</button>
+		  			</div>
+	    		</div>		      
+		    </div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/macbookpro16.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title"> MacBook Pro 16 inch</h5>
+					    <p class="card-text"> Apple<br> 
+					    	&#8377;<span> 199900.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>		      
+		    </div>		  		
+		</div>
+		<div class="row">
+	    	<div class="col-sm">
+	    		<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/lenovoideapad.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Lenovo Ideapad</h5>
+					    <p class="card-text">Lenovo<br> 
+					    	&#8377;<span> 30990.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>
+	    	</div>
+	    	<div class="col-sm">
+	    		<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/legion.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Lenovo Legion</h5>
+					    <p class="card-text">Lenovo<br> 
+					    	&#8377;<span> 72990.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>	      
+	    	</div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/lenovoideapads540.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Lenovo IdeaPad S540 </h5>
+					    <p class="card-text">Lenovo<br>
+					    	&#8377;<span> 60495.00</span></p>
+					    <button class="btn btn-primary">ADD TO CART</button>
+		  			</div>
+	    		</div>		      
+		    </div>
+		    <div class="col-sm">
+		    	<div class="card " style="width: 18rem;">
+					<img class="card-img-top" src="images/lenovoideapadslim.jpg" alt="Card image cap">
+					<div class="card-body">
+	    				<h5 class="card-title">Lenovo IdeaPad Slim</h5>
+					    <p class="card-text">Lenovo<br>
+					    	&#8377;<span> 59405.00</span></p>
+					    <button class="btn btn-primary" >ADD TO CART</button>
+		  			</div>
+	    		</div>		      
+		    </div>		  		
+		</div>
+	</div>
+	<div class="cartBox">
+		<div class="cart">
+			<i class="fa fa-close"></i>			
+			<h1>Cart</h1>
+			<table></table>
+		</div>
+	</div>
+
+
+</body>
+</html>
+
